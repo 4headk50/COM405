@@ -19,13 +19,14 @@ public class Week6 {
 
       
       if (carpark1.carsParked (new Car("YY02DOA","Blue",4.50)))
-      {
+        {
       System.out.println("Car Parked");
+        }
+      else
+        {
+            System.out.println("There are no free spaces");
+        }   
       }
-          
-      }
-         
-      
     }
     
 

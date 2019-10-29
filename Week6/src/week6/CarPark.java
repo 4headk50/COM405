@@ -30,4 +30,22 @@ public class CarPark {
         return false;
     }
     
+      public boolean carLeft(String NumberPlateIn)
+        {
+        for(int i=0; i< cars.length; i+=1)
+            {   if(cars[i] != null) 
+                {
+                    if(cars[i].GetNumberPlate().equals(NumberPlateIn)) 
+                    {
+                    cars[i] = null;
+                    return true;
+                    }
+                }
+            }  
+            return false;
+        }
+      
+      
+      
+      
 }
