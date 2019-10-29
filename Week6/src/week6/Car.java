@@ -10,31 +10,37 @@ package week6;
  * @author 4headk50
  */
 public class Car {
-    private String numberPlate;
+    private String reg;
     private String colour;
     private double ticketFare;
+    private String model;
     
     //constructor
-    public Car(String numberPlateIn, String colourIn,double ticketFareIn)
+    public Car(String numberPlateIn, String colourIn, String modelIn)
     {
-        numberPlate = numberPlateIn;
+        reg = numberPlateIn;
         colour = colourIn;
-        ticketFare = ticketFareIn;
+      //  ticketFare = ticketFareIn;
+        model = modelIn;
     }
     
-    //getter
-    public String GetNumberPlate ()
+    //getters
+    public String GetRegNo()
   {
-     return numberPlate;
+     return reg;
   }
     public String GetColour ()
     {
       return colour;
     }
     
-    public double GetTicketFare ()
+   /* public double GetTicketFare ()
     {
       return ticketFare;
     }
-    
+    */
+    public String GetModel ()
+    {
+    return model;
+    }
 }

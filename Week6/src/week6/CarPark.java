@@ -17,25 +17,28 @@ public class CarPark {
         cars = new Car[15];
     }
     
-      public boolean carsParked (Car CarsIn)
+    
+    //Add Car
+      public boolean carsParked (Car CarIn)
     {
-        for(int i=0; i< cars.length; i+=1)
+        for(int i=0; i< cars.length; i++)
         {
             if(cars[i] == null)
             {
-                cars[i] = CarsIn;
+                cars[i] = CarIn;
                 return true;
             }
         }
         return false;
     }
-    
-      public boolean carLeft(String NumberPlateIn)
+      
+    //Remove Car
+      public boolean removeCar(String reg)
         {
-        for(int i=0; i< cars.length; i+=1)
+        for(int i=0; i< cars.length; i++)
             {   if(cars[i] != null) 
                 {
-                    if(cars[i].GetNumberPlate().equals(NumberPlateIn)) 
+                    if(cars[i].GetRegNo().equals(reg)) 
                     {
                     cars[i] = null;
                     return true;
@@ -45,7 +48,26 @@ public class CarPark {
             return false;
         }
       
+    //Count cars in carpark
+     
       
       
+    
+    //Count free spaces in carpark  
+      
+      public int getEmptySpaces()
+      {    
+          int tally = 0; 
+          
+           for(int i=0; i< cars.length; i++)
+           {
+           if(cars[i] == null)
+             {
+            tally++;
+             }
+           }
+           
+           return tally;
+      }
       
 }
