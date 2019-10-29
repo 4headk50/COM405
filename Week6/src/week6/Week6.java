@@ -15,8 +15,18 @@ public class Week6 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+      CarPark carpark1 = new CarPark();
+
+      
+      if (carpark1.carsParked (new Car("YY02DOA","Blue",4.50)))
+      {
+      System.out.println("Car Parked");
+      }
+          
+      }
+         
+      
     }
     
-}
+
 

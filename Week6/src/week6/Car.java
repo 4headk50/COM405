@@ -12,12 +12,14 @@ package week6;
 public class Car {
     private String numberPlate;
     private String colour;
-
+    private double ticketFare;
+    
     //constructor
-    public Car(String numberPlateIn, String colourIn)
+    public Car(String numberPlateIn, String colourIn,double ticketFareIn)
     {
         numberPlate = numberPlateIn;
         colour = colourIn;
+        ticketFare = ticketFareIn;
     }
     
     //getter
@@ -28,6 +30,11 @@ public class Car {
     public String GetColour ()
     {
       return colour;
+    }
+    
+    public double GetTicketFare ()
+    {
+      return ticketFare;
     }
     
 }
