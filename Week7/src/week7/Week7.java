@@ -4,7 +4,10 @@
  * and open the template in the editor.
  */
 package week7;
-import java.util.Scanner;
+
+import java.util.HashSet;
+import java.util.Set;
+
 
 /**
  *
@@ -17,16 +20,12 @@ public class Week7 {
      */
     public static void main(String[] args) {
         
-       //int state =1;
-       // Scanner scanIn = new Scanner(System.in);
-       
-       //String input = scanIn.nextLine(); <------- String Input
-       //int input = Integer.parseInt(scanIn.nextLine()); <------- int Input
-
-       
-       
-       
-       
+        Managers m1 = new Managers("David", 70000, 30, 40, 25);
+        Admin a1 = new Admin("Brent", 20000, 25, 40);
+        a1.setManager(m1);
+        
+        System.out.println(m1.getDetails());  
+        System.out.println(a1.getDetails());
     }
     
 }

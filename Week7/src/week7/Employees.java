@@ -11,40 +11,48 @@ package week7;
  */
 public class Employees {
     
-    String name;
-    Double payRate;
-    float salary;
-    int hoursPerWeek;
-    int holidayEntitlement;
+    protected String name;
+    protected double pay;
+    protected int holiday;
+    protected int hours;
     
-    public Employees (String nameIn,Double payRateIn, float salaryIn, int hoursPerWeekIn, int holidayEntitlementIn) {
+    public Employees (String nameIn,double payIn, int holidayIn, int hoursIn) {
       
         name = nameIn;
-        payRate = payRateIn;
-        salary = salaryIn;
-        hoursPerWeek = hoursPerWeekIn;
-        holidayEntitlement = holidayEntitlementIn;        
+        pay = payIn;
+        holiday = holidayIn;
+        hours = hoursIn;
     }
-    
-     public String GetName(){
-     return name;
+
+    public void setPay (double payIn){
+        pay = payIn;
     }
-     
-       public double GetPayRate(){
-       return payRate;
+      
+    public boolean setHours (int hoursIn){
+        if (hoursIn <=40){
+            hours = hoursIn;
+            return true;
+        }
+        return false;
     }
-     
-       public float GetSalary(){
-       return salary;
-    }
-     
-       public int GetHoursPerWeek(){
-       return hoursPerWeek;
-    }
-       
-       public int GetolidayEntitlement(){
-       return holidayEntitlement;
-    }
-     
-    
+   
+   public double getYearlySalary(){
+       return pay;
+   }
+   
+   public boolean bookHoliday(int reduceBy){
+       if(holiday - reduceBy >= 0){
+           holiday -= reduceBy;
+           return true;
+       }
+       return false;
+   }
+   
+   public String getDetails(){
+       return name + " " + holiday + " " + getYearlySalary();
+   } 
+   
+   public String getName(){
+       return name;
+   }
 }

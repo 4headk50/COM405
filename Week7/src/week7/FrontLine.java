@@ -9,6 +9,16 @@ package week7;
  *
  * @author 4headk50
  */
-public class FrontLine {
-    
+public class FrontLine extends Employees{
+     public FrontLine (String nameIn,double payIn, int holidayIn, int hoursIn) {
+        
+         super(nameIn, payIn, holidayIn, hoursIn);
+     }
+     
+     @Override
+     public double getYearlySalary(){
+         return (pay * hours)*52;
+     }
+     
+     
 }
