@@ -16,6 +16,8 @@ public class Car {
     private String make;
     private String model;
     
+    
+    
     //constructor
     public Car(String numberPlateIn, String colourIn, String makeIn, String modelIn)
     {
