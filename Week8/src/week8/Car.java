@@ -13,15 +13,18 @@ public class Car {
     private String reg;
     private String colour;
     private double ticketFare;
+    private String make;
     private String model;
     
     //constructor
-    public Car(String numberPlateIn, String colourIn, String modelIn)
+    public Car(String numberPlateIn, String colourIn, String makeIn, String modelIn)
     {
         reg = numberPlateIn;
         colour = colourIn;
       //  ticketFare = ticketFareIn;
+        make = makeIn;
         model = modelIn;
+        
     }
     
     //getters

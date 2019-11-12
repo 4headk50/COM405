@@ -5,7 +5,7 @@
  */
 package week8;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 /**
  *
@@ -17,7 +17,13 @@ public class Week8 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+   
+        MainScreen gui = new MainScreen();
+        gui.pack();
+        gui.setVisible(true);
         
+        
+        /*
         int state =1;
         
       CarPark cp = new CarPark();
@@ -43,10 +49,12 @@ if(input.equals("a"))
     String reg = scanIn.nextLine();
     System.out.println ("Please add the colour of your car");
     String colour = scanIn.nextLine();
+    System.out.println ("Please add your Car make");
+    String make = scanIn.nextLine();
     System.out.println ("Please add your Car model");
     String model = scanIn.nextLine();
     
-  if(  cp.carsParked(new Car (reg,colour ,model)))
+  if(  cp.carsParked(new Car (reg, colour, make, model)))
   {
       System.out.println ("Car has been added");
   }
@@ -82,7 +90,7 @@ else if (input.equals("x"))
 }
 
 else {
-    System.out.println ("Please enter a vailed inpu");
+    System.out.println ("Please enter a vailed input");
 }
 
 
@@ -91,6 +99,7 @@ else {
 
         
         scanIn.close();
+*/
     }
  }
     
