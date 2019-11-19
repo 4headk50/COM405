@@ -69,14 +69,14 @@ colour = ColourIn;
        colour = colourIn;
    }
      
-   //Methods
-   public void accelerate()
+    //Methods
+   public void accelerate(int increase)
    {
        
-      currentSpeed++;
+       //currentSpeed++;
       
-      fuelLevel--; 
-       /*
+      // fuelLevel--; 
+       
        if(fuelLevel <= 0)
        {
            currentSpeed = 0;
@@ -91,7 +91,6 @@ colour = ColourIn;
       {
            currentSpeed += increase;
       }
-*/
    }
    public void brake(int change)
    {
@@ -104,7 +103,7 @@ colour = ColourIn;
        {
           currentSpeed -= change; 
        }
-       currentSpeed -= change;
+       //currentSpeed -= change;
    }
    public void refuel(int fuelIn)
    {
@@ -118,7 +117,6 @@ colour = ColourIn;
        }
       
    }
- 
 }
     
   

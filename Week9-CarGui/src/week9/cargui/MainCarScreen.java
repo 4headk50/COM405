@@ -29,19 +29,22 @@ public class MainCarScreen extends JFrame implements ActionListener {
 
     private GridBagConstraints constraints;
     
+    private Car c;
+    
      //Construstor
     
     public MainCarScreen(){
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setLayout(new GridBagLayout());
         constraints = new GridBagConstraints();
+        c = new Car();
         initComponents();
         layoutComponents();
     }
     
     public void initComponents(){
-    lblSpeed = new JLabel ("Speed: "+"");
-    lblFuel = new JLabel ("Fuel: "+"");
+    lblSpeed = new JLabel ("Speed: "+ c.getCurrentSpeed()+ " mph");
+    lblFuel = new JLabel ("Fuel: "+ c.getfuelLevel()+ " Liters");
  
     
     btnAcc = new JButton("Accelerate");
@@ -85,8 +88,18 @@ public class MainCarScreen extends JFrame implements ActionListener {
     }
     
     
-        public void actionPerformed(ActionEvent ev){
+    @Override 
+    public void actionPerformed(ActionEvent ev){
 
+       if (ev.getSource().equals(btnAcc)){
+           c.accelerate(5);
+       }
+       else if (ev.getSource().equals(btnBreak)){
+         c.brake(5);
+       }
+       else if (ev.getSource().equals(btnFuel)){
+         c.refuel(40);
+       }
        
   }
 }
