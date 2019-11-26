@@ -1,0 +1,114 @@
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JTextField;
+
+public class MainScreen extends JFrame implements ActionListener
+{
+	private Classroom room;
+	private GridBagConstraints constraints;
+	
+	private JLabel lblTitle;
+	private JLabel lblStudentID;
+	private JLabel lblStudentName;
+	
+	private JTextField txtStudentID;
+	private JTextField txtStudentName;
+	
+	private JButton btnAdd;
+	private JButton btnRemove;
+	
+	public MainScreen()
+	{
+		room = new Classroom("RM605");
+		this.setLayout(new GridBagLayout());
+		this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		constraints = new GridBagConstraints();
+		
+		// Set up our components
+		initComponents();
+		
+		// Create layout
+		layoutComponents();
+		
+	}
+	
+	public void initComponents()
+	{
+		lblTitle = new JLabel("Room Management System");
+		
+		lblStudentID = new JLabel("Student ID:");
+		lblStudentName = new JLabel("Student Name:");
+		
+		txtStudentID = new JTextField();
+		txtStudentName = new JTextField();
+		
+		btnAdd = new JButton("Add Student");
+		btnAdd.addActionListener(this);
+		btnRemove = new JButton("Remove Student");
+	}
+	
+	public void layoutComponents()
+	{
+		constraints.gridy = 0;
+		constraints.gridx = 0;
+		constraints.gridwidth = 2;
+		
+		this.add(lblTitle, constraints);
+		
+		constraints.gridy = 1;
+		constraints.gridx = 0;
+		constraints.gridwidth = 1;
+		this.add(lblStudentID, constraints);
+		
+		constraints.gridx = 1;
+		constraints.fill = GridBagConstraints.HORIZONTAL;
+		this.add(txtStudentID, constraints);
+		
+		constraints.fill = GridBagConstraints.NONE;
+		constraints.gridy = 2;
+		constraints.gridx = 0;
+		this.add(lblStudentName, constraints);
+		
+		constraints.fill = GridBagConstraints.HORIZONTAL;
+		constraints.gridx = 1;
+		this.add(txtStudentName, constraints);
+		
+		constraints.fill = GridBagConstraints.NONE;
+		constraints.gridy = 3;
+		constraints.gridx = 0;
+		this.add(btnAdd, constraints);
+		
+		constraints.gridx = 1;
+		this.add(btnRemove, constraints);
+	}
+	
+	public void actionPerformed(ActionEvent ev)
+	{
+		if (ev.getSource().equals(btnAdd))
+		{
+			String id = txtStudentID.getText();
+			String name = txtStudentName.getText();
+			
+			if(room.addStudent(new Student(id, name)))
+			{
+				JOptionPane.showMessageDialog(null, "Student has been added");
+			}
+			else
+			{
+				JOptionPane.showMessageDialog(null, "The room is full");
+			}
+		}
+		else if(ev.getSource().equals(btnRemove))
+		{
+			
+		}
+	}
+	
+}
