@@ -27,7 +27,7 @@ public class Cars extends Vehicles{
            return 5.00;
        }
         
-       return (Weight - 1590) * 0.10;
+       return (Weight - 1590 / 100) * 0.10 + 5.00;
   
     }
     
