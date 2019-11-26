@@ -9,6 +9,26 @@ package week10;
  *
  * @author 4headk50
  */
-public class Cars {
+public class Cars extends Vehicles{
+
+   
+
+    public Cars(String regNumberIn, double weightIn) 
+    {
+        super(regNumberIn, weightIn);
+    }
+
+    @Override
+    public double calculateFee() 
+    {
+     
+       if(Weight <= 1590)
+       {
+           return 5.00;
+       }
+        
+       return (Weight - 1590) * 0.10;
+  
+    }
     
 }

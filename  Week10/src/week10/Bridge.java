@@ -9,17 +9,6 @@ package week10;
  *
  * @author 4headk50
  */
-public class Motorbikes extends Vehicles {
-
-    public Motorbikes(String regNumberIn, double weightIn) 
-    {
-        super(regNumberIn, weightIn);
-    }
-
-    @Override
-    public double calculateFee() 
-    {
-        return 3.00;
-    }
+public class Bridge {
     
 }
