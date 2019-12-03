@@ -18,6 +18,9 @@ import static org.junit.Assert.*;
  */
 public class BridgeTest {
     Bridge br;
+    Car c1;
+    Car c2;
+    Car c3;
     
     public BridgeTest() {
   
@@ -34,7 +37,9 @@ public class BridgeTest {
     @Before
     public void setUp() {
      br = new Bridge(20,10000); 
-        
+     c1 = new Car("123A",20);
+     c2 = new Car("123B",40);
+     c3 = new Car ("123C",80); 
     }
     
     @After
@@ -46,16 +51,10 @@ public class BridgeTest {
      */
     @Test
     public void testCalcTotalWeight() {
-        
-         Car c1 = new Car("123A",20);
-         Car c2 = new Car("123B",40);
-         Car c3 = new Car ("123C",80);
          br.addVehicle(c1);     
          br.addVehicle(c2);
          br.addVehicle(c3);
-         assertEquals(140, br.calcTotalWeight());
-        
-      
+         assertEquals(140, br.calcTotalWeight());    
     }
 
     /**
@@ -63,7 +62,7 @@ public class BridgeTest {
      */
     @Test
     public void testAddVehicle() {
-       
+      
     }
 
     /**
