@@ -17,20 +17,14 @@ import static org.junit.Assert.*;
  * @author 4headk50
  */
 public class LorryTest {
-    
+    Lorry l;
     public LorryTest() {
-    }
-    
-    @BeforeClass
-    public static void setUpClass() {
-    }
-    
-    @AfterClass
-    public static void tearDownClass() {
     }
     
     @Before
     public void setUp() {
+        
+        l = new Lorry("123L1",8000);  
     }
     
     @After
@@ -42,13 +36,9 @@ public class LorryTest {
      */
     @Test
     public void testCalcFee() {
-        System.out.println("calcFee");
-        Lorry instance = null;
-        double expResult = 0.0;
-        double result = instance.calcFee();
-        assertEquals(expResult, result, 0.0);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertEquals (15.0, l.calcFee(), 0);
+        l = new Lorry("456L",7999);
+        assertEquals (10.0, l.calcFee(), 0);
     }
     
 }

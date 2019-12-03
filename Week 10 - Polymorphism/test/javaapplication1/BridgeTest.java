@@ -37,9 +37,9 @@ public class BridgeTest {
     @Before
     public void setUp() {
      br = new Bridge(20,10000); 
-     c1 = new Car("123A",20);
-     c2 = new Car("123B",40);
-     c3 = new Car ("123C",80); 
+     c1 = new Car("123A",100);
+     c2 = new Car("123B",200);
+     c3 = new Car ("123C",300); 
     }
     
     @After

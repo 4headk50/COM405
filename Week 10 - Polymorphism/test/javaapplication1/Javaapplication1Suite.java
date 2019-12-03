@@ -17,7 +17,7 @@ import org.junit.runners.Suite;
  * @author 4headk50
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({javaapplication1.MotorbikeTest.class, javaapplication1.VehicleTest.class, javaapplication1.BridgeTest.class, javaapplication1.CarTest.class, javaapplication1.MainScreenTest.class, javaapplication1.JavaApplication1Test.class, javaapplication1.LorryTest.class})
+@Suite.SuiteClasses({javaapplication1.MotorbikeTest.class, javaapplication1.BridgeTest.class, javaapplication1.CarTest.class, javaapplication1.LorryTest.class})
 public class Javaapplication1Suite {
 
     @BeforeClass
