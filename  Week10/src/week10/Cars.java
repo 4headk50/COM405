@@ -22,12 +22,13 @@ public class Cars extends Vehicles{
     public double calculateFee() 
     {
      
-       if(Weight <= 1590)
+       if(Weight > 1590)
        {
-           return 5.00;
+           double extra = ((Weight - 1590)/100)*0.10;
+           return extra + 5.00;
        }
-        
-       return (Weight - 1590 / 100) * 0.10 + 5.00;
+        return 5.00;
+       
   
     }
     

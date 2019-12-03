@@ -20,7 +20,7 @@ public class Lorries extends Vehicles{
     public double calculateFee() 
     {
         
-        if(Weight <= 8000)
+        if(Weight < 8000)
         {
         return 10.00;  
         }
