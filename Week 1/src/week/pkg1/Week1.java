@@ -162,12 +162,12 @@ public class Week1 {
          
          else if(deliveryMiles <= 20)
          {
-            System.out.println("That will be £15!"); 
+            System.out.println("That will be £15"); 
          }
          
          else
          {
-            System.out.println("That will be £30!"); 
+            System.out.println("That will be £20"); 
          }
          
          System.out.println("\nc.");
