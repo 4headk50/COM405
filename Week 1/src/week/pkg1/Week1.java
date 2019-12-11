@@ -29,9 +29,12 @@ public class Week1 {
         Date today = new Date();
         int speedLeniency = 10;
         String SpeedResponse = "";
+        boolean isStudent = true;
+        int busTicketPrice = 4;
+        int pensionersAge = 65;
         
         System.out.println("------------\nHello World! \n------------\n\nHi my name is " + name + "\n"
-         //      + " and I am " + age + " years old\n"
+        
         );
                 
                 
@@ -104,6 +107,32 @@ public class Week1 {
         System.out.println("Hello "+ name + ", you just went through a speed check zone on " + today 
                 +" \nThe speed limit is: " + speedLimit +" mph"
                 + "\n" + SpeedResponse); 
+        
+        System.out.println("\n\n--------------\n  Bus Ticket\n--------------\n");
+    
+        System.out.println("So you want to travel on this bus " + name);
+
+        if(age <= 3)
+        {
+           System.out.println("How are you out on your own, well you can for Freeee!!");
+        }
+        
+        else if(isStudent && age <= 19)
+        {
+           busTicketPrice = (busTicketPrice / 2);
+           System.out.println("Ahh a student card you can travel for: £" + busTicketPrice); 
+        }
+        
+        else if(age >= pensionersAge)
+        {
+           System.out.println("Well, You look old! you can travel for Freeee!!"); 
+        }
+        
+        else
+        {
+            System.out.println("Well it's £" + busTicketPrice); 
+        }
+    
     }
     
 }
