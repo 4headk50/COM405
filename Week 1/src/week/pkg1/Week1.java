@@ -18,8 +18,9 @@ public class Week1 {
         
         String name = "Kevin";
         int age = 38;
-        boolean isBirthday = true;
+        boolean isBirthday = false;
         int drinkAge = 21;
+        String club = "";
         
         System.out.println("------------\nHello World! \n------------\n\nHi my name is " + name + "\n"
          //      + " and I am " + age + " years old\n"
@@ -33,24 +34,49 @@ public class Week1 {
         
         if(isBirthday)
         {   age = age+1;
-            System.out.println("          and I have been told its your birthday and your now " + age);
+            System.out.println("          I have been told its your birthday and your now " + age);
         }
+        
         else 
         {
-            System.out.println("          and I been told its not your birthday so your still " + age);            
+            System.out.println("          I have been told its not your birthday so your still " + age);            
         }
+        
+        if(age >= 20 && age < 30)
+        {  
+            club = "and your in the 20s club";
+        }
+        
+        else if(age >= 30 && age < 40)
+        {   
+            club = "and your in the 30s club";
+        }
+        
+        else if (age >= drinkAge)
+        {
+            club = "but you have no club :(";
+        }
+        
+        else
+        {
+            club = "and you have no club :(";
+        }
+        
         if(age >= drinkAge)
         {
-            System.out.println("          which means you can drink... Yay!!"); 
+            System.out.println("          which means you can drink... Yay!! " + club); 
         }
+        
         else 
         {
-            System.out.println("          which means you still not allowed to drink :(");            
+            System.out.println("          which means you still not allowed to drink " + club);            
         }
         
         
-        
+       
         System.out.println("\n\n-------------\n   Driving\n-------------");
+        
+        
     }
     
 }
