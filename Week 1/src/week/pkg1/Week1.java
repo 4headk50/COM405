@@ -32,6 +32,10 @@ public class Week1 {
         boolean isStudent = true;
         int busTicketPrice = 4;
         int pensionersAge = 65;
+        int extraCostOver = 30;
+        double deliveryMiles = 31.6;
+        double extraMiles = (Math.round (deliveryMiles) - extraCostOver);
+        double extraDriveryCost = extraMiles * 0.5;
         
         System.out.println("------------\nHello World! \n------------\n\nHi my name is " + name + "\n"
         
@@ -132,7 +136,59 @@ public class Week1 {
         {
             System.out.println("Well it's £" + busTicketPrice); 
         }
-    
+        
+        System.out.println("\n\n------------\n  Delivery\n------------\n");
+        System.out.println("a.");
+        System.out.println("Hello " + name + " I see you want to deliver a parcel " + deliveryMiles + " miles");
+        
+        if(deliveryMiles <= 10)
+        {
+           System.out.println("That will be freee!");
+        }
+        
+        else
+        {
+           System.out.println("That will be £20");  
+        }
+        
+         System.out.println("\nb.");
+         System.out.println("Hello " + name + " I see you want to deliver a parcel " + deliveryMiles + " miles");
+         
+         if(deliveryMiles <= 10)
+         {
+            System.out.println("That will be freee!"); 
+         }
+         
+         else if(deliveryMiles <= 20)
+         {
+            System.out.println("That will be £15!"); 
+         }
+         
+         else
+         {
+            System.out.println("That will be £30!"); 
+         }
+         
+         System.out.println("\nc.");
+         System.out.println("Hello " + name + " I see you want to deliver a parcel " + deliveryMiles + " miles");
+         
+          if(deliveryMiles <= 10)
+         {
+            System.out.println("That will be freee!"); 
+         }
+         
+         else if(deliveryMiles <= 20)
+         {
+            System.out.println("That will be £15"); 
+         }
+         
+         else
+         {
+            System.out.println("That will be £" + extraDriveryCost); 
+         }
+         
+         System.out.println("\nd.");
+         System.out.println("Hello " + name + " I see you want to deliver a parcel " + deliveryMiles + " miles");
     }
     
 }
