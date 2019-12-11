@@ -36,7 +36,7 @@ public class Week1 {
         double deliveryMiles = 31.6;
         double extraMiles = (Math.round (deliveryMiles) - extraCostOver);
         double extraDriveryCost = extraMiles * 0.5;
-        double totalCost = (30 + extraDriveryCost);
+        double totalCost = (15 + extraDriveryCost);
         
         System.out.println("------------\nHello World! \n------------\n\nHi my name is " + name + "\n"
         
@@ -179,6 +179,11 @@ public class Week1 {
          }
          
          else if(deliveryMiles <= 20)
+         {
+            System.out.println("That will be £10"); 
+         }
+         
+         else if(deliveryMiles <= 30)
          {
             System.out.println("That will be £15"); 
          }
