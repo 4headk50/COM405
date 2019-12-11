@@ -5,6 +5,8 @@
  */
 package week.pkg1;
 
+import java.util.Date;
+
 /**
  *
  * @author Kevin
@@ -21,6 +23,12 @@ public class Week1 {
         boolean isBirthday = false;
         int drinkAge = 21;
         String club = "";
+        int speed = 33;
+        int speedLimit = 30;
+        int speedDiff = speed - speedLimit;
+        Date today = new Date();
+        int speedLeniency = 10;
+        String SpeedResponse = "";
         
         System.out.println("------------\nHello World! \n------------\n\nHi my name is " + name + "\n"
          //      + " and I am " + age + " years old\n"
@@ -74,9 +82,28 @@ public class Week1 {
         
         
        
-        System.out.println("\n\n-------------\n   Driving\n-------------");
+        System.out.println("\n\n-------------\n   Driving\n-------------\n");
         
+         if(speed <= speedLimit)
+        {
+            SpeedResponse = ("You were going " + speed + "mph, thank you for not speeding... Move along move along");
+        }
         
+        else if(speedDiff <= speedLeniency)
+        {
+            SpeedResponse = ("You were going " + speed + "mph that is "
+                    + speedDiff + "mph over the limit, you will be getting a ticket");
+        }
+        
+        else
+        {
+            SpeedResponse = ("You were going " + speed + "mph that is " 
+                    + speedDiff + "mph over the limit, kiss your ass goodby as your getting a ticket and going to court");
+        }
+        
+        System.out.println("Hello "+ name + ", you just went through a speed check zone on " + today 
+                +" \nThe speed limit is: " + speedLimit +" mph"
+                + "\n" + SpeedResponse); 
     }
     
 }
