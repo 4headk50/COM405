@@ -33,10 +33,12 @@ public class Week1 {
         int busTicketPrice = 4;
         int pensionersAge = 65;
         int extraCostOver = 30;
-        double deliveryMiles = 31.6;
+        double deliveryMiles = 22.6;
         double extraMiles = (Math.round (deliveryMiles) - extraCostOver);
         double extraDriveryCost = extraMiles * 0.5;
         double totalCost = (15 + extraDriveryCost);
+        int parcelValue = 101;
+        int parcelInsurance = 10;
         
         System.out.println("------------\nHello World! \n------------\n\nHi my name is " + name + "\n"
         
@@ -195,6 +197,47 @@ public class Week1 {
          
          System.out.println("\nd.");
          System.out.println("Hello " + name + " I see you want to deliver a parcel " + deliveryMiles + " miles");
+         
+         if(deliveryMiles <= 10 && parcelValue <= 100)
+         {
+            System.out.println("That will be freee!"); 
+         }
+         
+         else if(deliveryMiles <= 20 && parcelValue <= 100)
+         {
+            System.out.println("That will be £10"); 
+         }
+         
+         else if(deliveryMiles <= 30 && parcelValue <= 100)
+         {
+            System.out.println("That will be £15"); 
+         }
+         
+          else if(deliveryMiles > 30 && parcelValue <= 100)
+         {  
+            System.out.println("That will be £" + totalCost); 
+         }
+         
+         else if(deliveryMiles <= 10 && parcelValue >= 100)
+         {  totalCost = parcelInsurance;
+            System.out.println("That will be £" + totalCost);
+         }
+         
+         else if(deliveryMiles <= 20 && parcelValue >= 100)
+         {  totalCost = 10 + parcelInsurance;
+            System.out.println("That will be £" + totalCost);
+         }
+         
+         else if(deliveryMiles <= 30 && parcelValue >= 100)
+         {  totalCost = 15 + parcelInsurance;
+             System.out.println("That will be £" + totalCost);
+         }
+         
+          else 
+         {  totalCost = totalCost + parcelInsurance;
+            System.out.println("That will be £" + totalCost); 
+         }
+         
     }
     
 }
